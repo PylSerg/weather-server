@@ -17,7 +17,7 @@ app.get("/weather", validateWeatherRequest, async (req, res, next) => {
     )
     .catch((error) => console.log(error.response));
 
-  return res.status(200).send(Json.parse(response.data));
+  return res.status(200).send(response.data);
 });
 
 function validateWeatherRequest(req, res, next) {
